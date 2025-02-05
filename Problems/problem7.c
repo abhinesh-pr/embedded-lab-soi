@@ -6,7 +6,7 @@ int main(){
     printf("Enter a two digit number: ");
     scanf("%d",&number);
     if (number < 10 || number > 99) {
-        printf("Please enter a valid three-digit number.\n");
+        printf("Please enter a valid two-digit number.\n");
         return 1;
     } 
     printf("The tens's digit of %d is %d",number,number/10);

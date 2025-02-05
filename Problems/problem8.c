@@ -1,6 +1,7 @@
 // 8. Get three digit number from usr and return one's digit
 
 #include <stdio.h>
+
 int main(){
     int number;
     printf("Enter a three digit number: ");
