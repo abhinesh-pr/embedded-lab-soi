@@ -1,11 +1,11 @@
-// 6. Get two digit number from usr and return one's digit
+// 8. Get three digit number from usr and return one's digit
 
 #include <stdio.h>
 int main(){
     int number;
-    printf("Enter a two digit number: ");
+    printf("Enter a three digit number: ");
     scanf("%d",&number);
-    if (number < 10 || number > 99) {
+    if (number < 100 || number > 999) {
         printf("Please enter a valid three-digit number.\n");
         return 1;
     } 

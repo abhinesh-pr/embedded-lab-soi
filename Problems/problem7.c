@@ -1,10 +1,14 @@
-// 6. Get two digit number from usr and return ten's digit
+// 7. Get two digit number from usr and return ten's digit
 
 #include <stdio.h>
 int main(){
     int number;
     printf("Enter a two digit number: ");
     scanf("%d",&number);
+    if (number < 10 || number > 99) {
+        printf("Please enter a valid three-digit number.\n");
+        return 1;
+    } 
     printf("The tens's digit of %d is %d",number,number/10);
     return 0;
 }
