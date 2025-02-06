@@ -1,14 +1,15 @@
-// Program to print forward series, reverse series, sum of n numbers, print even number within the given limit (using forr..)
+// Program to print forward series, reverse series, sum of n numbers, print even number within the given limit (using whileh..)
 
 
 #include <stdio.h>
 
 void forward_series(){
-    int lim;
+    int lim,i=1;
     printf("Enter the limit: ");
     scanf("%d",&lim);
-    for(int i=1;i<=lim;i++){
+    while(i<=lim){
         printf("%d\n",i);
+        i++;
     }
 };
 
@@ -16,18 +17,20 @@ void reverse_series(){
     int lim;
     printf("Enter the limit: ");
     scanf("%d",&lim);
-    for(lim;lim>0;lim--){
+    while(lim>0){
         printf("%d\n",lim);
+        lim--;
     } 
 };
 
 void sum_of_nums(){
-    int lim,sum=0;
+    int lim,sum=0,i=1;
     printf("Enter the limit: ");
     scanf("%d",&lim);
     
-    for(int i=1;i<=lim;i++){
+    while(i<=lim){
         sum+=i;
+        i++;
     }
     printf("The sum of numbers is %d",sum);
 };
@@ -45,39 +48,42 @@ void print_even(){
 };
 
 void print_sum_even(){
-    int lim,sum = 0;
+    int lim,sum = 0,i=1;
     printf("Enter the limit: ");
     scanf("%d",&lim);
     
-    for(int i=1;i<=lim;i++){
+    while(i<=lim){
         if (i%2 ==0){
             sum+=i;
         }
+        i++;
     }
     printf("The sum of numbers is %d",sum);
 };
 
 void multiplication_table(){
-    int num;
+    int num,i=1;
     printf("Enter the number: ");
     scanf("%d",&num);
     printf("The multiplication table for %d is\n",num);
-    for(int i=1;i<=12;i++){
+    while(i<=12){
         printf("%dx%d=%d\n",num,i,num*i);
+        i++;
     }
 }
 
 int splitdigits(){
-    int num;
+    int num,i=1;
     printf("Enter a three digit number: ");
     scanf("%d",&num);
     if (num < 100 || num > 999) {
         printf("Please enter a valid three-digit number.\n");
         return 1;
     } 
-    for (int i=1;num>0;i++){
+    while (num>0){
         printf("%d\n",num % 10);
         num = num/10;
+        i++;
     } return 0;
 }
 
@@ -108,6 +114,7 @@ int main(){
     case 7:
         splitdigits();
         break;
+    
     default:
     printf("Enter a valid choice");
         break;

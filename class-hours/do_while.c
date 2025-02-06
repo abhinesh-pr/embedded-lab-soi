@@ -1,84 +1,90 @@
-// Program to print forward series, reverse series, sum of n numbers, print even number within the given limit (using forr..)
-
-
 #include <stdio.h>
 
-void forward_series(){
+void forward_series() {
+    int lim, i = 1;
+    printf("Enter the limit: ");
+    scanf("%d", &lim);
+    
+    do {
+        printf("%d\n", i);
+        i++;
+    } while (i <= lim);
+}
+
+void reverse_series() {
     int lim;
     printf("Enter the limit: ");
-    scanf("%d",&lim);
-    for(int i=1;i<=lim;i++){
-        printf("%d\n",i);
-    }
-};
-
-void reverse_series(){
-    int lim;
-    printf("Enter the limit: ");
-    scanf("%d",&lim);
-    for(lim;lim>0;lim--){
-        printf("%d\n",lim);
-    } 
-};
-
-void sum_of_nums(){
-    int lim,sum=0;
-    printf("Enter the limit: ");
-    scanf("%d",&lim);
+    scanf("%d", &lim);
     
-    for(int i=1;i<=lim;i++){
-        sum+=i;
-    }
-    printf("The sum of numbers is %d",sum);
-};
+    do {
+        printf("%d\n", lim);
+        lim--;
+    } while (lim > 0);
+}
 
-void print_even(){
-    int lim;
+void sum_of_nums() {
+    int lim, sum = 0, i = 1;
     printf("Enter the limit: ");
-    scanf("%d",&lim);
+    scanf("%d", &lim);
     
-    for(int i=1;i<=lim;i++){
-        if (i%2 ==0){
-            printf("%d\n",i);
-        }
-    }
-};
+    do {
+        sum += i;
+        i++;
+    } while (i <= lim);
+    
+    printf("The sum of numbers is %d\n", sum);
+}
 
-void print_sum_even(){
-    int lim,sum = 0;
+void print_even() {
+    int lim, i = 2;
     printf("Enter the limit: ");
-    scanf("%d",&lim);
+    scanf("%d", &lim);
     
-    for(int i=1;i<=lim;i++){
-        if (i%2 ==0){
-            sum+=i;
-        }
-    }
-    printf("The sum of numbers is %d",sum);
-};
+    do {
+        printf("%d\n", i);
+        i += 2;
+    } while (i <= lim);
+}
 
-void multiplication_table(){
-    int num;
+void print_sum_even() {
+    int lim, sum = 0, i = 2;
+    printf("Enter the limit: ");
+    scanf("%d", &lim);
+    
+    do {
+        sum += i;
+        i += 2;
+    } while (i <= lim);
+    
+    printf("The sum of even numbers is %d\n", sum);
+}
+
+void multiplication_table() {
+    int num, i = 1;
     printf("Enter the number: ");
-    scanf("%d",&num);
-    printf("The multiplication table for %d is\n",num);
-    for(int i=1;i<=12;i++){
-        printf("%dx%d=%d\n",num,i,num*i);
-    }
+    scanf("%d", &num);
+    printf("The multiplication table for %d is\n", num);
+    
+    do {
+        printf("%d x %d = %d\n", num, i, num * i);
+        i++;
+    } while (i <= 12);
 }
 
 int splitdigits(){
-    int num;
+    int num,i=1;
     printf("Enter a three digit number: ");
     scanf("%d",&num);
     if (num < 100 || num > 999) {
         printf("Please enter a valid three-digit number.\n");
         return 1;
     } 
-    for (int i=1;num>0;i++){
+    do {
         printf("%d\n",num % 10);
         num = num/10;
-    } return 0;
+        i++;
+    } while (num>0);
+    return 0;
 }
 
 int main(){
@@ -108,6 +114,7 @@ int main(){
     case 7:
         splitdigits();
         break;
+    
     default:
     printf("Enter a valid choice");
         break;
