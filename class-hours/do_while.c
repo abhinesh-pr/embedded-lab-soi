@@ -105,9 +105,23 @@ int rev3digits(){
     return 0;
 }
 
+int countdigit(){
+    int num,i=0;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    do {
+        num = num/10;
+        i++;
+    }while(num>0);
+    printf("Num of digits: %d\n",i);
+    return 0;
+}
+
+
+
 int main(){
     int choice;
-    printf("\n1.Forward Series\n2.Reverse Series\n3.Sum of Numbers\n4.Print even numbers only\n5.Print Sum of even numbers\n6.Print Multiplication Table\n7.Split Digits of # digit numbr\n8.Reverse 3 digit number\n\nEnter your choice:  ");
+    printf("\n1.Forward Series\n2.Reverse Series\n3.Sum of Numbers\n4.Print even numbers only\n5.Print Sum of even numbers\n6.Print Multiplication Table\n7.Split Digits of # digit numbr\n8.Reverse 3 digit number\n9.Find Digits in a number\n\nEnter your choice:  ");
     scanf("%d",&choice);
     switch (choice)
     {
@@ -134,6 +148,9 @@ int main(){
         break;
     case 8:
         rev3digits();
+        break;
+    case 9:
+        countdigit();
         break;
     
     default:
