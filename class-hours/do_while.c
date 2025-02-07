@@ -87,9 +87,27 @@ int splitdigits(){
     return 0;
 }
 
+int rev3digits(){
+    int num,rev=0,i=0;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    // if (num < 100 || num > 999) {
+    //     printf("Please enter a valid three-digit number.\n");
+    //     return 1;
+    // } 
+    printf("Before Reverse: %d\n",num);
+    do{
+        rev = rev*10 + (num%10);
+        num = num/10;
+        i++;
+    }while(num>0);
+    printf("After Reverse: %d\n",rev);
+    return 0;
+}
+
 int main(){
     int choice;
-    printf("\n1.Forward Series\n2.Reverse Series\n3.Sum of Numbers\n4.Print even numbers only\n5.Print Sum of even numbers\n6.Print Multiplication Table\n7.Split Digits of # digit numbr\n\nEnter your choice:  ");
+    printf("\n1.Forward Series\n2.Reverse Series\n3.Sum of Numbers\n4.Print even numbers only\n5.Print Sum of even numbers\n6.Print Multiplication Table\n7.Split Digits of # digit numbr\n8.Reverse 3 digit number\n\nEnter your choice:  ");
     scanf("%d",&choice);
     switch (choice)
     {
@@ -113,6 +131,9 @@ int main(){
         break;
     case 7:
         splitdigits();
+        break;
+    case 8:
+        rev3digits();
         break;
     
     default:
