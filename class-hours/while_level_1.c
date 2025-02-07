@@ -3,15 +3,8 @@
 
 #include <stdio.h>
 
-void forward_series();
-void reverse_series();
-void sum_of_nums();
-void print_even();
-void print_sum_even();
-void multiplication_table();
-int splitdigits();
-int rev3digits();
-int countdigit();
+void forward_series(),reverse_series(),sum_of_nums(),print_even(),print_sum_even(),multiplication_table();
+int splitdigits(),rev3digits(),countdigit();
 
 
 int main(){
