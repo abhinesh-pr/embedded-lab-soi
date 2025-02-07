@@ -3,6 +3,56 @@
 
 #include <stdio.h>
 
+void forward_series();
+void reverse_series();
+void sum_of_nums();
+void print_even();
+void print_sum_even();
+void multiplication_table();
+int splitdigits();
+int rev3digits();
+int countdigit();
+
+int main(){
+    int choice;
+    printf("\n1.Forward Series\n2.Reverse Series\n3.Sum of Numbers\n4.Print even numbers only\n5.Print Sum of even numbers\n6.Print Multiplication Table\n7.Split Digits of # digit numbr\n8.Reverse 3 digit number\n9.Find Digits in a number\n\nEnter your choice:  ");
+    scanf("%d",&choice);
+    switch (choice)
+    {
+    case 1:
+        forward_series();
+        break;
+    case 2:
+        reverse_series();
+        break;
+    case 3:
+        sum_of_nums();
+        break;
+    case 4:
+        print_even();
+        break;
+    case 5:
+        print_sum_even();
+        break;
+    case 6:
+        multiplication_table();
+        break;
+    case 7:
+        splitdigits();
+        break;
+    case 8:
+        rev3digits();
+        break;
+    case 9:
+        countdigit();
+        break;
+    default:
+    printf("Enter a valid choice");
+        break;
+    } return 0;
+    
+}
+
 void forward_series(){
     int lim;
     printf("Enter the limit: ");
@@ -105,45 +155,5 @@ int countdigit(){
         num = num/10;
     } printf("Num of digits: %d\n",i);
     return 0;
-}
-
-int main(){
-    int choice;
-    printf("\n1.Forward Series\n2.Reverse Series\n3.Sum of Numbers\n4.Print even numbers only\n5.Print Sum of even numbers\n6.Print Multiplication Table\n7.Split Digits of # digit numbr\n8.Reverse 3 digit number\n9.Find Digits in a number\n\nEnter your choice:  ");
-    scanf("%d",&choice);
-    switch (choice)
-    {
-    case 1:
-        forward_series();
-        break;
-    case 2:
-        reverse_series();
-        break;
-    case 3:
-        sum_of_nums();
-        break;
-    case 4:
-        print_even();
-        break;
-    case 5:
-        print_sum_even();
-        break;
-    case 6:
-        multiplication_table();
-        break;
-    case 7:
-        splitdigits();
-        break;
-    case 8:
-        rev3digits();
-        break;
-    case 9:
-        countdigit();
-        break;
-    default:
-    printf("Enter a valid choice");
-        break;
-    } return 0;
-    
 }
 
