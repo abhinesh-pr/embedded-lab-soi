@@ -4,11 +4,11 @@
 #include <stdio.h>
 
 void forward_series(),reverse_series(),sum_of_nums(),print_even(),print_sum_even(),multiplication_table();
-int splitdigits(),rev3digits(),countdigit();
+int splitdigits(),rev3digits(),countdigit(),pattern();
 
 int main(){
     int choice;
-    printf("\n1.Forward Series\n2.Reverse Series\n3.Sum of Numbers\n4.Print even numbers only\n5.Print Sum of even numbers\n6.Print Multiplication Table\n7.Split Digits of # digit numbr\n8.Reverse 3 digit number\n9.Find Digits in a number\n\nEnter your choice:  ");
+    printf("\n1.Forward Series\n2.Reverse Series\n3.Sum of Numbers\n4.Print even numbers only\n5.Print Sum of even numbers\n6.Print Multiplication Table\n7.Split Digits of # digit numbr\n8.Reverse 3 digit number\n9.Find Digits in a number\n10.Pattern\n\nEnter your choice:  ");
     scanf("%d",&choice);
     switch (choice)
     {
@@ -38,6 +38,9 @@ int main(){
         break;
     case 9:
         countdigit();
+        break;
+    case 10:
+        pattern();
         break;
     default:
     printf("Enter a valid choice");
@@ -148,5 +151,20 @@ int countdigit(){
         num = num/10;
     } printf("Num of digits: %d\n",i);
     return 0;
+}
+
+int pattern(){
+    for(int i=0;i<5;i++){
+        for(int j=0;j<=i;j++){
+            printf("* ");
+        }
+        printf("\n");
+    }
+    for(int i=4;i>=1;i--){
+        for(int j=0;j<i;j++){
+            printf("* ");
+        }
+        printf("\n");
+    }
 }
 
